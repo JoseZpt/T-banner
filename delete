@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 #
-
-#
 CesarHackGray=$(mktemp)
 base64 -d  >${CesarHackGray}<<DIXIE
 Y2xlYXIKc291cmNlICRIT01FL1QtYmFubmVyL0NPTE9SRVMKc2xlZXAgMgplY2hvIC1lICIkciBJ
@@ -27,8 +25,8 @@ c3VlcyIgPj4gbW90ZAplY2hvID4+IG1vdGQKZWNobyA+PiBtb3RkCmVjaG8gLWUgIiRyWyAkYSsg
 JHJdICRhYyBJbnN0YWxhbmRvIGZpZ2xldCIKcGtnIGluc3RhbGwgZmlnbGV0IC15ICY+PiAvZGV2
 L251bGwKY2xlYXIKc2xlZXAgMQpmaWdsZXQgLWYgZGlnaXRhbCBBbm9ueW1vdXMgWnB0CnNsZWVw
 IDAuMgplY2hvIC1lICIkYSBFbGltaW5hY2lvbiBGaW5hbGl6YWRhIgplY2hvIC1lICIkYWMgQWhv
-cmEgVGllbmUgQmFubmVyIEVsIEJhbm5lciBBY3R1YWwiCmVjaG8gLWUgIiRmYyBGQVZPUiBBQlJJ
-UiBPVFJBIFZFTlRBTkEiCg==
+cmEgVGllbmUgRWwgQmFubmVyIERlZmF1bCAiCmVjaG8gLWUgIiRmYyBGQVZPUiBBQlJJUiBPVFJB
+IFZFTlRBTkEiCmVjaG8gLWUgIiR2IEdyYWNpYXMgUG9yIHV0aWxpemFyIG1pIHNjcmlwdCIK
 DIXIE
 source ${CesarHackGray}
 rm -rf ${CesarHackGray}
