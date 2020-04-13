@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+CesarHackGray=$(mktemp)
+
+base64 -d  >${CesarHackGray}<<DIXIE
+
+IyEvYmluL2Jhc2gKI0NPTE9SRVMgQSBVVElMSVpBUgphPSdcZVsxOzM0bScKcj0nXGVbMTszMW0n
+
+CnY9J1xlWzE7MzJtJwpmYz0nXGVbMTszNW0nCmI9J1xlWzE7MzdtJwphYz0nXGVbMTszNm0nCg==
+
+DIXIE
+
+source ${CesarHackGray}
+
+rm -rf ${CesarHackGray}
