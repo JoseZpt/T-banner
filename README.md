@@ -25,4 +25,4 @@ Herramienta De Pesonalizacion  Con Python2
 
 # Screenshot
 
-! [Imagen-T-banner.jpg] (https://github.com/Anonymous-Zpt/Archivos/blob/master/Imagen-T-banner.jpg) 
+![Imagen-T-banner.jpg](https://github.com/Anonymous-Zpt/Archivos/blob/master/Imagen-T-banner.jpg) 
