@@ -1,16 +1,8 @@
 
 # T-banner
-#---------------------------------------------
-Suscribete a mi canal oficial ANONYMOUS ZPT  |
-#AnonymousZpt                                |
-#Suscribete a mi canal oficial ANONYMOUS ZPT |
-#---------------------------------------------
+Herramienta De Pesonalizacion  Con Python2
 
-
-
-
-
-INSTALACIÓN:
+# INSTALACIÓN:
 
 
 
@@ -22,9 +14,15 @@ INSTALACIÓN:
 
 4. cd T-banner 
 
-5. bash install.sh
+5. chmod +x *
 
-ABRIMOS OTRA PESTAÑA
-Eliminación de banner
+6. ./start 
+
+# Eliminación de banner
 1. cd T-banner 
-2. ./delete
+
+2. ./start --Delete
+
+# Screenshot
+
+! [Imagen-T-banner.jpg] (https://github.com/Anonymous-Zpt/Archivos/blob/master/Imagen-T-banner.jpg) 
