@@ -6,7 +6,7 @@ Herramienta De Pesonalizacion Con Python2
 ```
 $ apt update && apt upgrade 
 $ pkg install git 
-$ git clone https://github.com/Josezpt/T-banner
+$ git clone https://github.com/Anonymous-Zpt/T-banner
 $ cd T-banner 
 $ chmod +x *
 $ ./start
