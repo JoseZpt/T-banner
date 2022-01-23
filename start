@@ -21,7 +21,7 @@ else
 	ruta="$(pwd)"
 fi
 if [[ -e ${data} && -e "${data}/login.py" && -e "${data}/fecha.sh" && -e "${data}/motd" && -e "${data}/bash.bashrc" ]]; then
-	#
+	true
 else
 	echo "\n${b}[${r1}*${b}] Error, reinstalando herramienta...\n"
 	cd ${ruta}/..
