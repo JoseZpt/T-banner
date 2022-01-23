@@ -1,24 +1,26 @@
 # T-banner
 
-Herramienta De Pesonalizacion Con Python2
+![](https://raw.githubusercontent.com/JoseZpt/T-banner/master/data/imagen.jpg)
+
+T-banner es una herramienta simple para personalizar la interfaz de termux
 
 # INSTALACIÓN:
-```
-$ apt update && apt upgrade 
-$ pkg install git 
-$ git clone https://github.com/Anonymous-Zpt/T-banner
-$ cd T-banner 
-$ chmod +x *
-$ ./start
-Tendrás Un Menú Y Hay Desides Tu. 
-```
-# Eliminación de banner
-```
-$ cd T-banner 
+```apt update && apt upgrade 
+pkg install git 
+git clone https://github.com/Anonymous-Zpt/T-banner
+cd T-banner 
+chmod +x *
+./start```
 
-$ ./start -use --Delete
-```
+# Menu
+* Iniciar personalizacion 
+```./start --banner```
 
-# Screenshot
+* Eliminar banner
+```./start --delete```
 
-![Watch the video](https://youtu.be/T-D1KVIuvjA)
+* Canal YouTube
+```./start --josezpt```
+
+* Mostrar banner
+```./start --show```
