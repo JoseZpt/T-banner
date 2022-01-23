@@ -1,0 +1,117 @@
+#!/bin/bash
+#COLORES
+A='\e[1;34m'
+r='\e[1;31m'
+v='\e[1;32m'
+f='\e[1;35m'
+azul='\e[1;36m'
+b='\e[0m'
+ac='\e[1;36m'
+rs="\033[38;5;207m"
+m='\033[35m'
+g='\e[1;30m'
+am='\033[33m'
+v1="${b}\033[32m"
+r1="${b}\033[31m"
+data="$(pwd)/data"
+command -v python2 > /dev/null 2>&1 || { sleep 0.5; echo >&2 -e "\n$v1[$b1*$v1]$b Instalando python2..."; pkg install python2 -y &>> /dev/null;sleep 0.5;}
+if [[ "$(pwd)" == "${HOME}/T-banner"  ]]; then
+	ruta="${HOME}/T-banner"
+else
+	ruta="$(pwd)"
+fi
+if [[ -e ${data} && -e "${data}/login.py" && -e "${data}/fecha.sh" && -e "${data}/motd" && -e "${data}/bash.bashrc" ]]; then
+	#
+else
+	echo "\n${b}[${r1}*${b}] Error, reinstalando herramienta...\n"
+	cd ${ruta}/..
+	rm -rf T-banner
+	git clone https://github.com/JoseZpt/T-banner
+        if [[ ! -e "T-banner" ]]; then
+		echo -e "\n${b}[${r1}*${b}] Revisa tu conexion a internet\n"
+		exit
+	else
+		cd T-banner
+		bash start
+	fi
+fi
+
+help() {
+	sleep 0.0
+	echo -e "${v1}Credits:${r1} JoseZpt${b}"
+	echo
+	echo -e "  - Personalizar Terminal"
+	echo -e "    ./start --banner"
+	echo
+	echo -e "  - Eliminar Personalizacion"
+	echo -e "    ./start --delete"
+	echo
+	echo -e "  - Canal De Creador"
+	echo -e "    ./start --josezpt"
+	echo
+	echo -e "  - Mostrar Banner"
+	echo -e "    ./start --show"
+	echo
+}
+banner() {
+	rm -rf $PREFIX/etc/bash.bashrc
+	cp ${ruta}/data/bash.bashrc $PREFIX/etc
+	rm -rf $PREFIX/etc/motd
+	echo "python2 ${ruta}/data/login.py" >> $PREFIX/etc/bash.bashrc
+	sed -i '/ruta = */d' ${ruta}/data/login.py
+	sed -i "/os.system('sh ' */d" ${ruta}/data/login.py
+	echo "ruta = '"${ruta}"/data'" >> ${ruta}/data/login.py
+	echo "os.system('sh ' + ruta + '/fecha.sh')" >> ${ruta}/data/login.py
+}
+delete() {
+	rm -rf $PREFIX/etc/motd
+	cp ${ruta}/data/motd $PREFIX/etc
+	sed -i '/python2 */d' $PREFIX/etc/bash.bashrc
+}
+T-banner() {
+	echo -e "${v1}___________     ___."
+	echo -e "\__    ___/     \_ |__ _____    ____   ____   ___________"
+	echo -e "  |    |  ______ | __ \\__  \  /    \ /    \_/ __ \_  __ \ "
+	echo -e "  |    | /_____/ | \_\ \/ __ \|   |  \   |  \  ___/|  | \/"
+	echo -e "  |____|         |___  (____  /___|  /___|  /\___  >__|"
+	echo -e "                     \/     \/     \/     \/     \/${b}"
+}
+T-banner
+if [[ ! -z $1 ]]; then
+	case $1 in
+	"--banner")
+		echo -e "${b}[${v1}+${b}]${r1} Iniciando${b} banner personalizado"
+		sleep 5
+		banner
+		clear
+		python2 ${ruta}/data/login.py
+		echo -e "${b}[${v1}++${b}] Hecho\n"
+	;;
+	"--delete")
+		echo -e "${b}[${v1}+${b}]${r1} Eliminando${b} banner personalizado"
+		sleep 5
+		delete
+		clear
+		cat ${ruta}/data/motd
+		echo -e "${b}[${v1}++${b}] Hecho\n"
+
+	;;
+	"--josezpt")
+		echo -e "${b}[${v1}+${b}] Direccionando a${r1} YouTube"
+		sleep 2
+		am start -a android.intent.action.VIEW https://m.youtube.com/channel/UC5rd2Mwo2-zsxxuSAILF8mw &>> /dev/null
+		echo -e "${b}[${v1}++${b}] Hecho\n"
+	;;
+	"--show")
+		python2 ${ruta}/data/login.py
+	;;
+	*)
+		echo -e "${v1}Menu de ayuda"
+		echo -e "${v1}Comando:${r1} ${1}${v1} invalido."
+		help
+	;;
+	esac
+else
+	echo -e "${v1}Menu de ayuda"
+	help
+fi
