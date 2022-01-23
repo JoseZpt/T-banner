@@ -11,12 +11,13 @@
 T-banner es una herramienta simple para personalizar la interfaz de termux
 
 # Instalacion 
-```apt update && apt upgrade -y
+```
+apt update && apt upgrade -y
 pkg install git -y
 git clone https://github.com/JoseZpt/T-banner
 cd T-banner 
 chmod +x *
-./start```
+```
 
 # Menu
 * Personalizar
