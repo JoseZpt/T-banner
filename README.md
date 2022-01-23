@@ -16,13 +16,17 @@ chmod +x *
 
 # Menu
 * Iniciar personalizacion 
+
 `./start --banner `
 
 * Eliminar banner
+
 `./start --delete `
 
 * Canal YouTube
+
 `./start --josezpt `
 
 * Mostrar banner
+
 `./start --show `
