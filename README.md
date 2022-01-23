@@ -15,18 +15,14 @@ chmod +x *
 ```
 
 # Menu
-* Iniciar personalizacion 
+# Iniciar personalizacion 
+* `./start --banner `
 
-`./start --banner `
+# Eliminar banner
+* `./start --delete `
 
-* Eliminar banner
+# Canal YouTube
+* `./start --josezpt `
 
-`./start --delete `
-
-* Canal YouTube
-
-`./start --josezpt `
-
-* Mostrar banner
-
-`./start --show `
+# Mostrar banner
+* `./start --show `
