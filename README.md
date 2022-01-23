@@ -6,23 +6,24 @@ T-banner es una herramienta simple para personalizar la interfaz de termux
 
 # Instalacion 
 ```
-apt update && apt upgrade 
-pkg install git 
-git clone https://github.com/Anonymous-Zpt/T-banner
+apt update && apt upgrade -y
+pkg install git -y
+git clone https://github.com/JoseZpt/T-banner
 cd T-banner 
 chmod +x *
 ./start
 ```
 
 # Menu
-# Iniciar personalizacion 
-* `./start --banner `
+* Iniciar personalizacion
+<br>
+`./start --banner `
 
-# Eliminar banner
-* `./start --delete `
+* Eliminar banner
+`./start --delete `
 
-# Canal YouTube
-* `./start --josezpt `
+* Canal YouTube
+`./start --josezpt `
 
-# Mostrar banner
-* `./start --show `
+* Mostrar banner
+`./start --show `
